@@ -16,17 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyn-zi-8zE">
-                                <rect key="frame" x="75" y="118" width="33" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqe-Qj-Onc">
+                                <rect key="frame" x="76" y="344" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="F8E-vb-KW1" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="TP5-Zp-Kfj"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="embedSwiftView" destination="cqe-Qj-Onc" id="R7l-ot-8Nf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,6 +64,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3T-R8-pvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1468" y="84"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="ygJ-b0-eDD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pG-DD-rSN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="F8E-vb-KW1" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="74"/>
         </scene>
     </scenes>
     <resources>

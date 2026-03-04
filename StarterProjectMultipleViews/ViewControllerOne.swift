@@ -32,6 +32,9 @@ class ViewControllerOne: UIViewController {
     // MARK: - IBOutlets
     
     
+    @IBSegueAction func embedSwiftUI(_ coder: NSCoder) -> UIViewController? {
+        return <#UIHostingController(coder: coder, rootView: ...)#>
+    }
     
     // MARK: - Variables and Constants
     
