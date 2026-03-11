@@ -26,16 +26,17 @@
  */
 
 import UIKit
+import SwiftUI
 
 class ViewControllerOne: UIViewController {
     
     // MARK: - IBOutlets
     
     
-    @IBSegueAction func embedSwiftUI(_ coder: NSCoder) -> UIViewController? {
-        return <#UIHostingController(coder: coder, rootView: ...)#>
+    @IBSegueAction func uiView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: LoginView())
     }
-    
+    //lets me use swiftUI as a UIview controller by wrapping it in a UIhostingController. I....
     // MARK: - Variables and Constants
     
     
