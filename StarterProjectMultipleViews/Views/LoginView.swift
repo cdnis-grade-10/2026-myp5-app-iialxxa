@@ -6,53 +6,58 @@
 //
 
 import SwiftUI
-
 struct LoginView: View {
     
     @State var email = ""
     @State var password = ""
     var body: some View {
         //Log in form
+        
+        
+    NavigationStack{
         VStack{
             //Heading
             Text("Welcome Back!").font(.system(size: 36, weight: .semibold))
-            .offset(y: 300) }
+            .offset(y:10) }
         VStack{
-            Form{
-                TextField("Email address", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Email address", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                NavigationLink {
+                    RegisterView() }label: {
+                        Text("Create an account")
+                            .offset(y:400)} }
+            VStack{
                 
-                //attempt log in
-                Button{
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .fill(Color.blue)
-                        
-                        Text("Log In")
-                            .foregroundColor(.white)
-                            .bold()
+                Form{
+                    TextField("Email address", text: $email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    SecureField("Password", text: $password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    
+                    //attempt log in
+                    Button{
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .fill(Color.blue)
+                            
+                            Text("Log In")
+                                .foregroundColor(.white)
+                                .bold()
+                        }
                     }
                 }
             }
-        }
-        .offset(y: 300)
-    
+            
+            .frame(width: 400, height: 200)
         
-        //create account
-        
-        VStack{
-            Button( "Create an account" )
-                .padding(.bottom,50) }
-            Spacer()
+           
+            
+                
             
         }
         
     }
     
-
-
-
+    
+}
 
