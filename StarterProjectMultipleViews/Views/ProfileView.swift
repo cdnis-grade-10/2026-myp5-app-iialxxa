@@ -18,7 +18,24 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack{
             VStack{
-              
+                //Avatar
+                Image(systemName: "peron.circle")
+                    .resizable()
+                    .aspectRatio(contentMode : .fit)
+                    .foregroundColor(Color.blue)
+                    .frame(width: 125, height: 135)
+                
+                Rectangle()
+                    .fill(Color.blue)
+                    .cornerRadius(25)
+                    .frame(width: 125, height: 135)
+                
+                
+                
+                //Info
+                
+                
+              // Sign out
                 
             }
             .navigationTitle("Profile")
@@ -27,6 +44,6 @@ struct ProfileView: View {
     }
 }
 
-#Preview {
-    ProfileView()
-}
+//#Preview {
+//    ProfileView()
+//}
