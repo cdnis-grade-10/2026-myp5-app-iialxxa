@@ -34,7 +34,7 @@ class ViewControllerOne: UIViewController {
     
     
     @IBSegueAction func uiView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: LoginView())
+        return UIHostingController(coder: coder, rootView: MainView())
     }
     //lets me use swiftUI as a UIview controller by wrapping it in a UIhostingController. I....
 
